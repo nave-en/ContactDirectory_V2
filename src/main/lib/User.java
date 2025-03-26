@@ -8,6 +8,7 @@ public class User {
     public User() {
         // adding some default user information
         userCredentials.put("superstar@gmail.com", "1234qwer");
+        contact = new Contact();
     }
 
     /**
@@ -30,5 +31,41 @@ public class User {
         }
 
         return false;
+    }
+
+    /**
+     * Display all the contacts
+     * 
+     * @return {@code void}
+     * @author nave-en
+     * @date 2025-Mar-26
+     */
+    public void displayAllContacts() {
+        contact.displayAllContacts();
+    }
+
+    /**
+     * Add the contact details
+     * 
+     * @param name the name of the contact to add
+     * @param phoneNumber the phone number of the contact to add
+     * @return {@code void}
+     * @author nave-en
+     * @date 2025-Mar-26
+     */
+    public void addContact(String name, String phoneNumber) {
+        contact.addContact(name, phoneNumber);
+    }
+
+    /**
+     * Search the contact by name
+     * 
+     * @param name the name of the contact to search
+     * @return {@code void}
+     * @author nave-en
+     * @date 2025-Mar-26
+     */
+    public void searchByContactName(String name) {
+        contact.searchByContactName(name.toLowerCase());
     }
 }
