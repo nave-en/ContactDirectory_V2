@@ -68,4 +68,63 @@ public class User {
     public void searchByContactName(String name) {
         contact.searchByContactName(name.toLowerCase());
     }
+
+    /**
+     * Search the contact by number
+     *
+     * @param number the number of the contact to search
+     * @return {@code void}
+     * @author nave-en
+     * @date 2025-Mar-26
+     */
+    public void searchByContactNumber(String number) {
+        contact.searchByContactNumber(number);
+    }
+
+    /**
+     * Delete the contact
+     *
+     * @param name the name of the contact to delete
+     * @return {@code void}
+     * @author nave-en
+     * @date 2025-Mar-26
+     */
+    public void deleteContact(String name) {
+        contact.deleteContact(name);
+    }
+
+    /**
+     * Update the contact
+     *
+     * @param currName the current name of the contact
+     * @param newName the new name of the contact
+     * @return {@code void}
+     * @author nave-en
+     * @date 2025-Mar-26
+     */
+    public void updateContact(String currName, String newName) {
+        contact.updateContact(currName, newName);
+    }
+
+    /**
+     * Show the duplicate contacts
+     *
+     * @return {@code void}
+     * @author nave-en
+     * @date 2025-Mar-26
+     */
+    public void showDuplicateContacts() {
+        contact.showDuplicateContacts();
+    }
+
+    /**
+     * Merge the duplicate contacts
+     *
+     * @return {@code void}
+     * @author nave-en
+     * @date 2025-Mar-26
+     */
+    public void mergeDuplicateContacts() {
+        contact.mergeDuplicateContacts();
+    }
 }

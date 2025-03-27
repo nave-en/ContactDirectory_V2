@@ -49,8 +49,38 @@ public class ContactApplication {
         user.searchByContactName("Anand");
         System.out.println("Adding Dinesh Kumar, Phone : 1234509777");
         user.addContact("Dinesh Kumar","1234509777");
+        System.out.println("Adding Dinesh Kumar, Phone : 1234509677");
+        user.addContact("Dinesh Kumar","1234509677");
         System.out.println("Searching for Kumar in small case");
         user.searchByContactName("kumar");
+
+        System.out.println("Search the contact by its number");
+        System.out.println("Searching for 1234567890");
+        user.searchByContactNumber("1234567890");
+        System.out.println("Searching for 1234");
+        user.searchByContactNumber("1234");
+
+        System.out.println("Delete the contact by its name exact match(case insensitive)");
+        System.out.println("Deleting Naveen");
+        user.deleteContact("Naveen");
+        System.out.println("Displaying all contacts in sorted order");
+        user.displayAllContacts();
+        System.out.println("Edit the contact by its name exact match(case insensitive)");
+        System.out.println("Update Kumar to Naveen Kumar");
+        user.updateContact("Kumar", "Naveen Kumar");
+        System.out.println("Displaying all contacts in sorted order");
+        user.displayAllContacts();
+        System.out.println("Adding Bala, Phone : 1234509777");
+        user.addContact("Bala", "1234509777");
+        System.out.println("Adding Bala, Phone : 1234509177");
+        user.addContact("Bala", "1234509177");
+        user.displayAllContacts();
+
+        System.out.println("Show Duplicate Contacts");
+        user.showDuplicateContacts();
+        System.out.println("Merging the duplicate contacts to lexically smaller contact");
+        user.mergeDuplicateContacts();
+        user.displayAllContacts();
 
         sc.close();
     }
